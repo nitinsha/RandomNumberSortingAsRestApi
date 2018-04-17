@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Result: Sorted NUmbers</title>
+</head>
+<body>
+<h1>Result:</h1>
+
+<h2>Sorted Array:</h2><span th:text="${joinedString}"></span>
+<h2>Time to sort(ns):</h2><span th:text="${sortingTimeNanoSecond}"></span>
+<h2>No. of Exchanges:</h2><span th:text="${numberOfExchanges}"></span>
+<br>
+<a href="/api/sort/getAll">View All Requests</a>
+</body>
+</html>
