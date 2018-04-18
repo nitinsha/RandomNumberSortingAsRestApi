@@ -18,10 +18,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.nitin.demorandomsort.business.domain.RandomNumberSort;
 import com.nitin.demorandomsort.business.service.RandomNumberSortingService;
 import com.nitin.demorandomsort.controller.RandomNumberSortController;
-//import static org.mockito.Mockito.*;
-//import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-//import static org.springframework.test.web.servlet.ResultActions.*;
 import static org.hamcrest.Matchers.*;
 
 
