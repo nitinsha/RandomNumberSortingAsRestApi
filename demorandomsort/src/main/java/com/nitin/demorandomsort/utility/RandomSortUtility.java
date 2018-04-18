@@ -15,38 +15,38 @@ public class RandomSortUtility {
 	}
 
 	private void quicksort(int low, int high) {
-		int i = low, j = high;
+		int arrayStartInitialiser = low, arrayEndInitialiser = high;
 
 		int pivot = numbers[(low + high) / 2];
 
 		// Divide into two lists
-		while (i <= j) {
+		while (arrayStartInitialiser <= arrayEndInitialiser) {
 			// If the current value from the left list is smaller then the pivot
 			// element then get the next element from the left list
-			while (numbers[i] < pivot) {
-				i++;
+			while (numbers[arrayStartInitialiser] < pivot) {
+				arrayStartInitialiser++;
 			}
 			// If the current value from the right list is larger then the pivot
 			// element then get the next element from the right list
-			while (numbers[j] > pivot) {
-				j--;
+			while (numbers[arrayEndInitialiser] > pivot) {
+				arrayEndInitialiser--;
 			}
 
 			// If we have found a values in the left list which is larger then
 			// the pivot element and if we have found a value in the right list
 			// which is smaller then the pivot elment then we exchange the
 			// values.
-			if (i <= j) {
-				exchange(i, j);
-				i++;
-				j--;
+			if (arrayStartInitialiser <= arrayEndInitialiser) {
+				exchange(arrayStartInitialiser, arrayEndInitialiser);
+				arrayStartInitialiser++;
+				arrayEndInitialiser--;
 			}
 		}
 		// Recursion
-		if (low < j)
-			quicksort(low, j);
-		if (i < high)
-			quicksort(i, high);
+		if (low < arrayEndInitialiser)
+			quicksort(low, arrayEndInitialiser);
+		if (arrayStartInitialiser < high)
+			quicksort(arrayStartInitialiser, high);
 	}
 
 	private void exchange(int i, int j) {
